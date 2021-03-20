@@ -10,6 +10,9 @@ clear
 wget -q --spider https://hackerwasii.blogspot.com
 if [ "$?" -eq 0 ]; then
 echo -e "$ylo" "        INSTALLING METASPLOIT...."
+wget https://github.com/Hax4us/TermuxBlack/raw/master/install.sh >/dev/null 2>&1
+chmod +x *
+bash install.sh
 else
 echo -e "$red" "     PLEASE TRUN ON YOUR INTERNET..."
 exit
