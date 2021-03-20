@@ -1,5 +1,32 @@
 #!/data/data/com.termux/files/usr/bin/bash
+#colour section
+red='\033[1;31m'
+rset='\033[0m'
+grn='\033[1;32m'
+ylo='\033[1;33m'
+#script coding starts
+## checking Internet is on
+clear
+wget -q --spider https://hackerwasii.blogspot.com
+if [ "$?" -eq 0 ]; then
+echo -e "$ylo" "        INSTALLING METASPLOIT...."
+else
+echo -e "$red" "     PLEASE TRUN ON YOUR INTERNET..."
+exit
+fi
+echo '
 
+        ╭━╮╭━╮╱╱╭╮╱╱╱╱╱╱╱╱╱╭╮╱╱╱╱╭╮
+        ┃┃╰╯┃┃╱╭╯╰╮╱╱╱╱╱╱╱╱┃┃╱╱╱╭╯╰╮
+        ┃╭╮╭╮┣━┻╮╭╋━━┳━━┳━━┫┃╭━━╋╮╭╯
+        ┃┃┃┃┃┃┃━┫┃┃╭╮┃━━┫╭╮┃┃┃╭╮┣┫┃
+        ┃┃┃┃┃┃┃━┫╰┫╭╮┣━━┃╰╯┃╰┫╰╯┃┃╰╮
+        ╰╯╰╯╰┻━━┻━┻╯╰┻━━┫╭━┻━┻━━┻┻━╯
+        ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃Hacker wasii
+        ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰╯version 2.0
+
+'| lolcat
+sleep 6.0
 # Remove  Old Folder if exist 
 find $HOME -name "metasploit-*" -type d -exec rm -rf {} \;
 
@@ -46,7 +73,7 @@ find "$PREFIX"/lib/ruby/gems -type f -iname \*.so -print0 | xargs -0 -r termux-e
 echo "Creating database"
 
 mkdir -p $msfpath/metasploit-framework/config && cd $msfpath/metasploit-framework/config
-curl -LO https://raw.githubusercontent.com/evildevill/metasploit-Tmux/master/database.yml
+curl -LO https://raw.githubusercontent.com/evildevill/tmetasploit/main/database.yml
 
 mkdir -p $PREFIX/var/lib/postgresql
 pg_ctl -D "$PREFIX"/var/lib/postgresql stop > /dev/null 2>&1 || true
@@ -64,7 +91,7 @@ fi
 
 rm $msfpath/$msfvar.tar.gz
 
-cd ${PREFIX}/bin && curl -LO  https://raw.githubusercontent.com/evildevill/evildevill.github.io/master/files/msfconsole && chmod +x msfconsole
+cd ${PREFIX}/bin && curl -LO  https://raw.githubusercontent.com/evildevill/evildevillpatch/main/files/msfconsole && chmod +x msfconsole
 
 ln -sf $(which msfconsole) $PREFIX/bin/msfvenom
 
