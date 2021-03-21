@@ -10,9 +10,6 @@ clear
 wget -q --spider https://hackerwasii.blogspot.com
 if [ "$?" -eq 0 ]; then
 echo -e "$ylo" "        INSTALLING METASPLOIT...."
-wget https://github.com/Hax4us/TermuxBlack/raw/master/install.sh >/dev/null 2>&1
-chmod +x *
-bash install.sh
 else
 echo -e "$red" "     PLEASE TRUN ON YOUR INTERNET..."
 exit
@@ -30,6 +27,8 @@ echo '
 
 '| lolcat
 sleep 6.0
+wget https://github.com/Hax4us/TermuxBlack/raw/master/install.sh
+bash install.sh
 # Remove  Old Folder if exist 
 find $HOME -name "metasploit-*" -type d -exec rm -rf {} \;
 
