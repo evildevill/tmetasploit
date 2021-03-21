@@ -27,6 +27,7 @@ echo '
 
 '| lolcat
 sleep 6.0
+rm -rf metasploit.sh
 wget https://github.com/Hax4us/TermuxBlack/raw/master/install.sh
 bash install.sh
 # Remove  Old Folder if exist 
