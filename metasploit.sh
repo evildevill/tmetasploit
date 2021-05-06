@@ -29,7 +29,7 @@ echo '
 sleep 6.0
 rm -rf metasploit.sh
 wget https://github.com/Hax4us/TermuxBlack/raw/master/install.sh
-bash install.sh
+bash install.sh -i
 # Remove  Old Folder if exist 
 find $HOME -name "metasploit-*" -type d -exec rm -rf {} \;
 
