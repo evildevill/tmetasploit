@@ -9,7 +9,7 @@ ylo='\033[1;33m'
 clear
 wget -q --spider https://hackerwasii.blogspot.com
 if [ "$?" -eq 0 ]; then
-echo -e "$ylo" "        INSTALLING METASPLOIT...."
+echo -e "$ylo" "          INSTALLING METASPLOIT...."
 else
 echo -e "$red" "     PLEASE TRUN ON YOUR INTERNET..."
 exit
