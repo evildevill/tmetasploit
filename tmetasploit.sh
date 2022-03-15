@@ -30,8 +30,8 @@ sleep 6.0
 am start -a android.intent.action.VIEW -d https://wa.me/923137119351 > /dev/null 2>&1
 sleep 2.0
 rm -rf metasploit.sh
-wget https://github.com/Hax4us/TermuxBlack/raw/master/install.sh
-bash install.sh -i
+#wget https://github.com/Hax4us/TermuxBlack/raw/master/install.sh
+#bash install.sh -i
 # Remove  Old Folder if exist 
 find $HOME -name "metasploit-*" -type d -exec rm -rf {} \;
 
